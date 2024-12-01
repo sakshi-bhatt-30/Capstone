@@ -1,0 +1,592 @@
+/* globals.css */
+@import "font-awesome/css/font-awesome.min.css";
+
+/* Tailwind base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* Set body background to black */
+body {
+  background-color: #171717;  /* Black background */
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout container */
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header Styles */
+header {
+  background-color: black; /* Black background for header */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Optional subtle shadow */
+}
+
+/* Logo in the header */
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+header .logo-box {
+  background: white;
+  color: black;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Main body styles */
+.main-body {
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: margin-top 0.5s ease; /* Smooth transition for separation */
+}
+
+/* Optional hover effect on logo */
+header .logo:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Button Styles */
+.button-primary {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+.button-outline {
+  border: 1px solid #888;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: #888;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+}
+
+.button-outline:hover {
+  color: white;
+  border-color: white;
+}
+
+.user-feedback {
+  background: linear-gradient(135deg, #050505 30%, #000 70%); /* Slightly adjusted gradient for more contrast */
+  color: white;
+  padding: 6rem 2rem; /* Adjust top/bottom padding */
+  border-top: 4px solid #63b3ed; /* Blue border on top for distinction */
+  margin-bottom: 6rem; /* Space before footer */
+  position: relative;
+}
+
+.user-feedback h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase; /* Makes the title more pronounced */
+  letter-spacing: 1px; /* Adds spacing for a more bold look */
+  text-align: center;
+}
+
+.user-feedback p {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Feedback Form Styles */
+.feedback-form {
+  background-color: #111111; /* Dark gray background for form */
+  padding: 2rem;
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect for scale and shadow */
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.feedback-form:hover {
+  transform: scale(1.05); /* Slight scaling on hover */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow effect */
+}
+
+.feedback-form h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.feedback-form label {
+  display: block;
+  font-size: 1.125rem;
+  color: #a0aec0;
+  margin-bottom: 0.5rem;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #111214; /* Dark gray input field */
+  color: #fff;
+  border: 2px solid #4a5568; /* Default border color */
+  border-radius: 0.375rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Input and Textarea Focus Styles */
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: none;
+  border-color: #63b3ed; /* Blue border when focused */
+}
+
+/* Button Styles */
+.feedback-form button {
+  background-color: #63b3ed; /* Blue background */
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.375rem;
+  border: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Button Hover Styles */
+.feedback-form button:hover {
+  background-color: #b5cadd; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+.comparison-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+}
+
+/* Individual Cards */
+.comparison-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
+  width: 400px;
+  max-width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title */
+.comparison-card h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Features Section */
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.comparison-card ul li {
+  font-size: 1.2rem;
+  color: #374151;
+  margin: 15px 0;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Transition for Features */
+.comparison-card ul li:hover {
+  color: #090a0a;
+  transform: translateX(5px);
+}
+
+/* Dropdown Section */
+.feature-dropdown {
+  display: none;
+  margin-top: 10px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature-dropdown img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Expand Dropdown */
+.comparison-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  gap: 8rem;
+  flex-wrap: wrap;
+  flex:1
+}
+
+
+.comparison-card {
+  flex: 1; /* Allow the cards to grow equally */
+  max-width: 45%; /* Limit the card width */
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-right: 1rem; /* Add margin between the cards */
+  min-height: 480px;
+}
+.comparison-card:last-child {
+  margin-right: 0; /* Remove margin from the last card */
+}
+
+.comparison-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.card-title {
+  font-size: x-large;
+  font-weight: bold;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1rem;
+}
+.comparison-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.comparison-card li {
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.comparison-card li:hover {
+  background-color: #4caf50;
+  color: #ffffff;
+}
+
+.feature-dropdown {
+  margin-top: 0.5rem;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.comparison-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f8f8;
+}
+
+.comparison-heading {
+  font-size: 3rem; /* Big font size */
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
+}
+
+.comparison-heading:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #4caf50; /* Change color on hover */
+}
+
+/* Ensure dropdown is hidden by default */
+.feature-dropdown {
+  display: none; /* Hidden by default */
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show the dropdown when it's selected */
+.comparison-card li:hover .feature-dropdown {
+  display: block; /* Make the dropdown visible on hover */
+}
+
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.arrow-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+.comparison-card li:hover .arrow-icon {
+  transform: rotate(180deg); /* Rotate the arrow when hovering */
+}
+.feature-title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.comparison-card li:hover .feature-dropdown {
+  display: block; /* Show the dropdown when the feature is hovered */
+}
+.feature-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+
+.workflow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #090909;
+}
+
+.workflow-heading {
+  font-size: 3rem; /* Big font size */
+  font-weight: bold;
+  text-align: center;
+  color: #e391df;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.workflow-heading:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+  color: #e76ae1; /* Change color on hover */
+}
+
+.boxes-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.box {
+  width: 250px;
+  background-color: #e0dbdb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box-header {
+  margin-bottom: 1rem;
+}
+
+.box-name {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #eab8db;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-weight: bold;
+  color: #e391df;
+}
+
+.box-description {
+  margin-top: 1rem;
+}
+
+.box-description-text {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #eab8db;
+  border-radius: 8px;
+  background-color: #e0c8da;
+  height: 100px;
+  resize: none;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border-color: #e2aada;
+}
+
+/* Feature Section Styles */
+.feature-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #000000; /* Black background */
+}
+
+/* Feature Container */
+.feature-container {
+  width: 80%; /* Adjust width for the buttons */
+  max-width: 800px;
+  height: 60px; /* Button height */
+  position: relative;
+  overflow: hidden; /* Hide overflow during slide transitions */
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Box */
+.feature-box {
+  width: 100%;
+  height: 100%;
+  background-color: #1c1c1c; /* Dark gray */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden; /* Ensure sliding text stays within bounds */
+  border: 2px solid #333; /* Subtle border */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Text Wrapper */
+.text-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Description Text Styling */
+.text-wrapper.description {
+  color: #f5f5f5;
+  font-size: 1rem;
+  font-weight: normal;
+}
+.feature-heading {
+  font-size: 3rem; /* Large font size */
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  transition: transform 0.3s ease, color 0.3s ease; /* Add transition for hover effect */
+}
+.section-divider {
+  border: none;
+  border-top: 1px solid #444; /* Thin gray line */
+  width: 100%;
+  margin: 2rem 0;
+ 
+}
