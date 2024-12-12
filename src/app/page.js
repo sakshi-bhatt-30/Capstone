@@ -10,7 +10,7 @@ import Workflow from '@/components/workflow';
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div className="min-h-screen bg-gradient-to-r from-black via-gray-900 to-black text-white">
       
       <Header />
       <Hero />

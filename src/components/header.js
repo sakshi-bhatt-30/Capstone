@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+
 import Link from "next/link";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,9 +23,9 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="sticky top-0 bg-black border-b border-gray-700 py-4 z-50">
+    <nav className="sticky top-0 bg-gradient-to-r from-black via-gray-900 to-black border-b border-gray-700 py-4 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <a href="/" className="flex items-center gap-2 text-white no-underline">
+        <a href="/" className="flex gap-2 items-center text-white no-underline">
           <div className="bg-white text-black w-8 h-8 flex items-center justify-center rounded-lg font-bold">
             FQ
           </div>
@@ -36,28 +37,31 @@ export default function Header() {
             FlockIQ
           </span>
         </a>
-        <div className="flex gap-4 items-center">
-  <a href="#features" className="text-gray-400 hover:text-white transition">
-    Features
-  </a>
-  <a href="#analytics" className="text-gray-400 hover:text-white transition">
-    Analytics
-  </a>
-  <a href="/comparison" className="text-gray-400 hover:text-white transition">
-    Comparison
-  </a>
-  <a href="/about" className="text-gray-400 hover:text-white transition">
-    About
-  </a>
-  <Link href="http://flockiq.streamlit.app/" className="border border-gray-500 text-gray-400 hover:text-white px-6 py-2 rounded-lg transition">
+        
+        <div className="flex gap-3 items-center box-decoration-clone bg-transparent box-content p-2 border-2 border-gray-600 rounded-full">
+            <a href="#features" className="text-gray-400 hover:bg-gray-800 hover:text-white transition box-content p-2 rounded-full">
+              Features
+            </a>
+            <a href="#analytics" className="text-gray-400 hover:bg-gray-800 hover:text-white transition box-content p-2 rounded-full">
+              Analytics
+            </a>
+            <a href="/comparison" className="text-gray-400 hover:bg-gray-800 hover:text-white transition box-content p-2 rounded-full">
+              Comparison
+            </a>
+            <a href="/about" className="text-gray-400 hover:bg-gray-800 hover:text-white transition box-content p-2 rounded-full">
+              About
+            </a>
+        </div>
+  <div className="flex gap-2 items-center ">
+  <Link href="http://flockiq.streamlit.app/" className="border border-gray-500 text-gray-400 hover:text-white px-6 py-2 rounded-full transition">
     Login
   </Link>
-  <a href="http://flockiq.streamlit.app/" className="bg-white text-black px-6 py-2 rounded-lg hover:bg-gray-200 transition">
+  <a href="http://flockiq.streamlit.app/" className="bg-yellow-400 text-black px-6 py-2 rounded-full hover:bg-gray-200 transition">
     Get Started
   </a>
 </div>
 
-      </div>
+  </div>
     </nav>
   );
 }

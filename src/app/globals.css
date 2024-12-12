@@ -521,7 +521,7 @@ input:focus {
   justify-content: center;
   gap: 1.5rem;
   padding: 2rem;
-  background-color: #000000; /* Black background */
+  background: transparent; /* Black background */
 }
 
 /* Feature Container */
