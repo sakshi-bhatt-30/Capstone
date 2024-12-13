@@ -13,17 +13,17 @@ module.exports = {
             width: '100%',
           },
         },
-        blink: {
-          '50%': {
-            borderColor: 'transparent',
-          },
-          '100%': {
-            borderColor: 'yellow',
-          },
-        },
+        // blink: {
+        //   '50%': {
+        //     borderColor: 'transparent',
+        //   },
+        //   '100%': {
+        //     borderColor: 'yellow',
+        //   },
+        // },
       },
       animation: {
-        typing: 'typing 5s steps(31, end) ', // Plays once and holds position
+        typing: 'typing 3s steps(100, end) infinite',
         // blink: 'blink 0.7s step-end infinite', // Optional cursor blink
       },
       colors: {

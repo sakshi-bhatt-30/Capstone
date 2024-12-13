@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <nav className="sticky top-0 bg-gradient-to-r from-black via-gray-900 to-black border-b border-gray-700 py-4 z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <a href="/" className="flex gap-2 items-center text-white no-underline">
+        <Link href="/" className="flex gap-2 items-center text-white no-underline">
           <div className="bg-white text-black w-8 h-8 flex items-center justify-center rounded-lg font-bold">
             FQ
           </div>
@@ -36,7 +36,7 @@ export default function Header() {
           >
             FlockIQ
           </span>
-        </a>
+        </Link>
         
         <div className="flex gap-3 items-center box-decoration-clone bg-transparent box-content p-2 border-2 border-gray-600 rounded-full">
             <a href="#features" className="text-gray-400 hover:bg-gray-800 hover:text-white transition box-content p-2 rounded-full">
