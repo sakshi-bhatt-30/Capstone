@@ -9,40 +9,40 @@ const FeatureSection = () => {
       id: 1,
       title: "Advanced Analytics",
       description:
-        "SGain deep insights into user responses with visual data.",
-      image: "/path/to/real-time-sharing.png", // Replace with actual image path
+        "Gain deep insights into user responses with visual data.",
+      image: "/path/to/real-time-sharing.png", 
     },
     {
       id: 2,
       title: "Conditional Logic",
       description:
         "Show or hide questions dynamically based on user inputs.",
-      image: "/path/to/group-scheduling.png", // Replace with actual image path
+      image: "/path/to/group-scheduling.png", 
     },
     {
       id: 3,
       title: "Collaborative Editing",
       description:
         "Edit forms simultaneously with your team.",
-      image: "/path/to/invite-rsvp.png", // Replace with actual image path
+      image: "/path/to/invite-rsvp.png", 
     },
     {
       id: 4,
       title: "Custom Branding",
       description:
         "Customize your forms with logos and themes.",
-      image: "/path/to/shared-calendars.png", // Replace with actual image path
+      image: "/path/to/shared-calendars.png", 
     },
     {
       id: 5,
       title: "Password Protection",
       description:
         "Secure your forms with password protection.",
-      image: "/path/to/shared-calendars.png", // Replace with actual image path
+      image: "/path/to/shared-calendars.png", 
     },
   ];
 
-  const [activeFeature, setActiveFeature] = useState(features[0]); // Default to first feature
+  const [activeFeature, setActiveFeature] = useState(features[0]); 
 
   return (
   <div className="feature-section min-h-screen flex flex-col items-center justify-center bg-black">
@@ -73,7 +73,7 @@ const FeatureSection = () => {
       <div className="content-container flex flex-col md:flex-row items-center justify-center bg-gray-800 rounded-lg p-8 space-x-6 w-full max-w-6xl h-[400px]">
         <motion.div
           className="text-content w-1/2 h-full flex flex-col justify-center"
-          key={activeFeature.id} // Trigger animation on change
+          key={activeFeature.id} 
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
@@ -91,7 +91,7 @@ const FeatureSection = () => {
         </motion.div>
         <motion.div
           className="image-content w-1/2 h-full flex items-center justify-center"
-          key={`${activeFeature.id}-image`} // Trigger animation on image change
+          key={`${activeFeature.id}-image`} 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.9 }}
