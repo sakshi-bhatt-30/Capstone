@@ -45,14 +45,14 @@ const FeatureSection = () => {
   const [activeFeature, setActiveFeature] = useState(features[0]); 
 
   return (
-  <div className="feature-section min-h-screen flex flex-col items-center justify-center bg-black">
-      <h2 className="font-bold text-5xl md:text-7xl bg-gradient-to-r from-gray-500 via-gray-200 to-gray-500 inline-block text-transparent bg-clip-text mb-6">
+  <div id="features" className="feature-section min-h-screen flex  items-center justify-center bg-black">
+  <h2 className="font-bold text-5xl md:text-7xl bg-gradient-to-r from-gray-500 via-gray-200 to-gray-500 inline-block text-transparent bg-clip-text mb-6">
         Features
       </h2>
       <p className="text-white mb-8">
         Discover features that make our product special
       </p>
-      <div className="button-container flex space-x-4 mb-8">
+      <div className="button-container flex space-x-6 mb-8">
         {features.map((feature) => (
           <motion.button
             key={feature.id}
